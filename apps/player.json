@@ -1,0 +1,34 @@
+{
+  "notification": {
+    "url": "https://github.com/hdoonline/hdonline/releases/download/rl/hdo-betav2.0.9.apk",
+    "title": "Welcome!",
+    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 😀 😃<br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
+    "show": false
+  },
+  "update_release": {
+    "build": 100,
+    "forceUpdate": false,
+    "isUpdate": false
+  },
+  "ads_config" : {
+    "show_start": true,
+    "show": true,
+    "session_time": 120
+  },
+  "ads_init" : "admob",
+  "ads_start_remote" : {
+    "enable_admob": true,
+    "enable_applovin": true,
+    "enable_unity": true
+  },
+  "ads_back_remote" : {
+    "enable_admob": true,
+    "enable_applovin": true,
+    "enable_unity": true
+  },
+  "unity_remote" : {
+    "sdk_key": "5243515",
+    "unit_id": "Interstitial_Android"
+  },
+  "enable_open_admob": true
+}

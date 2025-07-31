@@ -1,0 +1,14 @@
+{
+	"callbacks": [
+		"dist/callback/streamrapid.js",
+		"dist/callback/m4ufree.js",
+		"dist/callback/lookmovie.js",
+		"dist/callback/rabbitstream.js",
+		"dist/callback/mcloud.js",
+		"dist/callback/vidstream.js",
+		"dist/callback/soap2day.js",
+		"dist/callback/play9str_playm4u.js",
+		"dist/callback/vidplay.js",
+		"dist/callback/smashystream.js"
+	]
+}

@@ -1,0 +1,31 @@
+{
+    "notification_config": {
+      "content": "",
+      "type": "movie",
+      "id": "521034",
+      "name": "hdo"
+    },
+    "ads_config": {
+      "init_ads": "admob"
+    },
+    "tmdb_apikey": {
+      "ios_key": "3f6036e41fc244bd77f0e28bc5f2904d",
+      "android_key": "3f6036e41fc244bd77f0e28bc5f2904d"
+    },
+    "update_release": {
+      "version": "3.4",
+      "url": "https://github.com/hdoonline/hdonline/releases/download/v2.0.15/hdo.2.0.15v.apk",
+      "contents1": "Remove ads in detail when use external player.",
+      "contents2": "Improvement and stability.",
+      "contents3": "Update more source.",
+      "force_update": false,
+      "isUpdate": true
+    },
+    "timeout_priority_source": 10,
+    "host_priority": [
+      "Rabbitstream",
+      "MCloud",
+      "PTOWEMBED",
+      "NAFDAH"
+    ]
+  }
