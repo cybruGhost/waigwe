@@ -1,7 +1,7 @@
 {
   "notification": {
-    "url": "https://wianime.com/",
-    "title": "New Anime App",
+    "url": "http",
+    "title": "New A App",
     "contents": "<p>Download the app to enjoy your favorite anime shows anytime, anywhere.</p>",
     "btn_title": "Get it",
     "show": false,
@@ -16,7 +16,7 @@
   },
   "update_release": {
     "version": "4.3",
-    "url": "https://github.com/hdoonline/hdonline/releases/download/v2.1.1/hdo-2.1.1.apk",
+    "url": "https://github.com/ses/download/v2.1.1-2.1.1.apk",
     "contents1": "Improvement and stability.",
     "contents2": "Update more source.",
     "contents3": "Update more subtitle",
@@ -24,7 +24,7 @@
     "isUpdate": true
   },
   "app_player_config": {
-    "player_apk_url": "https://github.com/hdoonline/player/releases/download/v1.1.6/mediaon-1.1.6.apk",
+    "player_apk_url": "https://github.coplayer/releases/download/v1.1.6/mediaon-1.1.6.apk",
     "player_version_build": 33,
     "player_is_install_force": false,
     "force_player": true
@@ -32,7 +32,7 @@
   "switch_player_config": {
     "package_name": "com.mediaon.apt",
     "activity_name": "com.mediaon.apt.PlayerActivity",
-    "apk_url": "https://github.com/hdoonline/player/releases/download/v1.1.6/mediaon-1.1.6.apk",
+    "apk_url": "https://github.creleases/download/v1.1.6/mediaon-1.1.6.apk",
     "store_url": "https://play.google.com/store/apps/details?id=com.mediaon.apt",
     "version_build": 33,
     "is_force": false,
@@ -52,7 +52,7 @@
     {
       "package_name": "com.drama.simpleplayer",
       "activity_name": "com.drama.simpleplayer.PlayerActivity",
-      "apk_url": "https://github.com/hdoonline/dramaplayer/releases/download/v1.0.5/dramaplayer-1.0.5.apk",
+      "apk_url": "https://github.coeases/download/v1.0.5/dramaplayer-1.0.5.apk",
       "store_url": "https://play.google.com/store/apps/details?id=com.drama.simpleplayer",
       "version_build": 1,
       "is_force": false,
@@ -61,7 +61,7 @@
     {
       "package_name": "com.mediaon.apt",
       "activity_name": "com.mediaon.apt.PlayerActivity",
-      "apk_url": "https://github.com/hdoonline/player/releases/download/v1.1.6/mediaon-1.1.6.apk",
+      "apk_url": "https://github.com/heases/download/v1.1.6/mediaon-1.1.6.apk",
       "store_url": "https://play.google.com/store/apps/details?id=com.mediaon.apt",
       "version_build": 1,
       "is_force": false,
