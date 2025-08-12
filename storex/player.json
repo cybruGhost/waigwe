@@ -1,34 +1,109 @@
 {
-  "notification": {
-    "url": "https://github.com/cybruGhost/player/releases/latest/download/jennienew.apk",
-    "title": "⚠️ Update Required!",
-    "contents": "<p>We've made important updates to Jennie Player.<br />You must update to continue using the app.<br /><br />✅ Faster performance 🚀<br />✅ Bug fixes 🐞<br /><br />Tap below to download and install the latest version.</p>",
-    "show": true
+  "notifications": [
+    {
+      "key": "NOTI_2.0",
+      "url": "https://thecub4.netlify.app/anizone.html",
+      "title": "Introducing the New Anime App!",
+      "contents": "<p>Experience anime like never before! Download the updated app for all your favorite shows, now with exciting new features.</p>",
+      "btn_title": "Update Now",
+      "show": true
+    },
+    {
+      "version": "45",
+      "url": "https://discord.gg/3kbSe2UWNQ",
+      "title": "Need Help? 🤔",
+      "contents": "If you run into any issues or have questions, feel free to contact me directly on Discord 📱 Press OK to chat.",
+      "show": true,
+      "is_force": true,
+      "force_update": true,
+      "isUpdate": true
+    }
+  ],
+  "ads_config": {
+    "init_ads": "admob",
+    "admob": {
+      "app_id": "ca-app-pub-7167154680086124~1956582131",
+      "banner_ad": "ca-app-pub-7167154680086124/6551931099"
+    },
+    "show_ads": true
+  },
+  "tmdb_apikey": {
+    "ios_key": "8d6d91941230817f7807d643736e8a49",
+    "android_key": "8d6d91941230817f7807d643736e8a49"
   },
   "update_release": {
-    "build": 101,
-    "forceUpdate": true,
+    "version": "4.4",
+    "url": "https://github.com/cybruGhost/Cube/releases/download/v2.0.25/thecube-2.0.25.apk",
+    "contents1": "Improved performance and stability. Visit https://thecub.netlify.app if download fails.",
+    "contents2": "Fixed servers, cleanup, and added Download button. Please update to continue watching.",
+    "contents3": "Use stable WiFi or Data to avoid download issues. Go to settings and grant Cube storage permission to install updates.",
+    "force_update": true,
     "isUpdate": true
   },
-  "ads_config": {
-    "show_start": true,
-    "show": true,
-    "session_time": 120
+  "on_restart": {
+    "reset_as_new": true,
+    "welcome_message": "Welcome to THECUBE App! Start exploring your favorite shows now."
   },
-  "ads_init": "admob",
-  "ads_start_remote": {
-    "enable_admob": true,
-    "enable_applovin": true,
-    "enable_unity": true
+  "app_player_config": {
+    "player_apk_url": "https://thecub4.netlify.app/dl/v2.0.20/player.apk",
+    "player_version_build": 24,
+    "player_is_install_force": false,
+    "force_player": true,
+    "background_playback": true,
+    "subtitle_styling": {
+      "font_size": 16,
+      "font_color": "#FFFFFF",
+      "background": "#80000000"
+    }
   },
-  "ads_back_remote": {
-    "enable_admob": true,
-    "enable_applovin": true,
-    "enable_unity": true
+  "user_preferences": {
+    "default_player": "core",
+    "remember_quality": true,
+    "remember_subtitle": true,
+    "auto_play_next": true
   },
-  "unity_remote": {
-    "sdk_key": "5243515",
-    "unit_id": "Interstitial_Android"
-  },
-  "enable_open_admob": true
+  "switch_player_config": {
+    "package_name": "com.drama.simpleplayer",
+    "activity_name": "com.drama.simpleplayer.PlayerActivity",
+    "apk_url": "https://github.com/cybruGhost/player/releases/download/v1.0.9/jennienew.apk",
+    "store_url": "https://play.google.com/store/apps/detaiayer",
+    "version_build": 16,
+    "is_force": true,
+    "app_name": "Jennie Player",
+    "is_ab_testing": false,
+    "buffer_config": {
+      "min_buffer_ms": 2000,
+      "max_buffer_ms": 5000,
+      "reconnect_timeout": 3000,
+      "sleep_priority_links": 3000,
+      "priority_links": [
+        "SERVER F1",
+        "SERVER F2",
+        "SERVER A1",
+        "SERVER A2",
+        "SERVER C1",
+        "SERVER C2"
+      ]
+    },
+    "data": [
+      {
+        "package_name": "com.drama.simpleplayer",
+        "activity_name": "com.drama.simpleplayer.PlayerActivity",
+        "apk_url": "https://github.com/hdooine/dramaplayer/releases/download/v1.0.5/dramaplayer-1.0.5.apk",
+        "store_url": "https://play.google.com/store/apps/details?id=com.drama.simpleplayer",
+        "version_build": 16,
+        "is_force": true,
+        "app_name": "Drama Player"
+      },
+      {
+        "package_name": "com.mon.apt",
+        "activity_name": "com.med.apt.PlayerActivity",
+        "apk_url": "https://github.com/hdoonline/player/releases/download/v1.0.17/mediaon-1.0.17.apk",
+        "store_url": "https://play.google.com/store/apps/details?id=com.mediaon.apt",
+        "version_build": 9,
+        "is_force": false,
+        "app_name": "Me"
+      }
+    ]
+  }
 }
