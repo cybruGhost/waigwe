@@ -1,32 +1,32 @@
 {
   "notification": {
-    "url": "https://github.cne/releases/download/retav2.0.9.apk",
-    "title": "Welcome!",
-    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 😀 😃<br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
-    "show": false
+    "url": "https://github.com/cybruGhost/player/releases/latest/download/jennienew.apk",
+    "title": "⚠️ Update Required!",
+    "contents": "<p>We've made important updates to Jennie Player.<br />You must update to continue using the app.<br /><br />✅ Faster performance 🚀<br />✅ Bug fixes 🐞<br /><br />Tap below to download and install the latest version.</p>",
+    "show": true
   },
   "update_release": {
-    "build": 100,
-    "forceUpdate": false,
-    "isUpdate": false
+    "build": 101,
+    "forceUpdate": true,
+    "isUpdate": true
   },
-  "ads_config" : {
+  "ads_config": {
     "show_start": true,
     "show": true,
     "session_time": 120
   },
-  "ads_init" : "admob",
-  "ads_start_remote" : {
+  "ads_init": "admob",
+  "ads_start_remote": {
     "enable_admob": true,
     "enable_applovin": true,
     "enable_unity": true
   },
-  "ads_back_remote" : {
+  "ads_back_remote": {
     "enable_admob": true,
     "enable_applovin": true,
     "enable_unity": true
   },
-  "unity_remote" : {
+  "unity_remote": {
     "sdk_key": "5243515",
     "unit_id": "Interstitial_Android"
   },
