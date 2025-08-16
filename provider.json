@@ -1,19 +1,32 @@
 {
-	"providers": [
-
-"dist/providers/vidsrccc.js",
-"dist/providers/uniquestream.js",
-"dist/providers/2embedcc.js",
-"dist/providers/aoneroom.js",
-"dist/providers/idflix.js",
-"dist/providers/vidsrccc.js",
-"dist/providers/vidlink.js",
-"dist/providers/fmovies.js",
-"dist/providers/vidsrc.js",
-"dist/providers/tomautoembed.js",
-"dist/providers/vidsrcpro.js",
-"dist/providers/ymovies.js",
-"dist/providers/yesmovies.js",
-"dist/providers/ridomovie.js"
-	]
+  "providers": [
+    "dist/providers/vidsrccc.js",
+    "dist/providers/uniquestream.js",
+    "dist/providers/2embedcc.js",
+    "dist/providers/aoneroom.js",
+    "dist/providers/idflix.js",
+    "dist/providers/vidlink.js",
+    "dist/providers/fmovies.js",
+    "dist/providers/vidsrc.js",
+    "dist/providers/tomautoembed.js",
+    "dist/providers/vidsrcpro.js",
+    "dist/providers/ymovies.js",
+    "dist/providers/yesmovies.js",
+    "dist/providers/ridomovie.js",
+    "dist/providers/flixhq.js",
+    "dist/providers/cineb.js",
+    "dist/providers/primewire.js",
+    "dist/providers/loklok.js",
+    "dist/providers/emovies.js",
+    "dist/providers/soap2day.js",
+    "dist/providers/m4ufree.js",
+    "dist/providers/watchonline.js",
+    "dist/providers/vumoo.js",
+    "dist/providers/catflix.js",
+    "dist/providers/streamflix.js",
+    "dist/providers/cinecalidad.js",
+    "dist/providers/susflix.js",
+    "dist/providers/rezka.js",
+    "dist/providers/blackvid.js"
+  ]
 }
