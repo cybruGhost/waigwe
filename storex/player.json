@@ -1,42 +1,142 @@
 {
+  "meta": {
+    "config_version": 2.3,
+    "last_updated": "2023-11-15",
+    "compatibility": {
+      "min_android": 8.0,
+      "max_android": 13.0,
+      "supported_arch": ["armeabi-v7a", "arm64-v8a"]
+    }
+  },
   "update_release": {
-    "build": 16,
-    "url": "https://github.com/hdoonline/hdotv/releases/download/v2.1.3/hdotv-2.1.3.apk",
-    "contents": "There is a new update, please download to experience.",
-    "force_update": false
+    "build": 18,
+    "version": "2.2.0",
+    "url": "https://github.com/hdoonline/hdotv/releases/download/v2.2.0/hdotv-2.2.0.apk",
+    "mirror_url": "https://cdn.hdo.tv/releases/hdotv-2.2.0.apk",
+    "contents": {
+      "en": "New update available! Enjoy enhanced stability and new features.",
+      "es": "¡Nueva actualización disponible! Disfruta de mayor estabilidad y nuevas funciones."
+    },
+    "changelog": [
+      "Added 4K streaming support",
+      "Improved subtitle rendering",
+      "Fixed memory leaks",
+      "New server connections"
+    ],
+    "force_update": false,
+    "critical": false,
+    "file_size": "28.4 MB",
+    "md5_checksum": "a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
   },
   "app_player_config": {
-    "player_apk_url": "https://github.com/hdoonline/player/releases/download/v1.0.18/mediaon-1.0.18.apk",
-    "player_version_build": 18,
+    "player_apk_url": "https://github.com/hdoonline/player/releases/download/v1.0.20/mediaon-1.0.20.apk",
+    "mirror_url": "https://cdn.hdo.tv/player/mediaon-1.0.20.apk",
+    "player_version_build": 20,
+    "min_version_required": 15,
     "player_is_install_force": false,
-    "force_player": true
+    "force_player": true,
+    "features": {
+      "hdr_support": true,
+      "multi_audio": true,
+      "subtitle_styles": true,
+      "background_play": false,
+      "cast_support": true
+    }
   },
   "switch_player_config": {
     "package_name": "com.drama.simpleplayer",
     "activity_name": "com.drama.simpleplayer.PlayerActivity",
-    "apk_url": "https://github.com/hdoonline/dramaplayer/releases/download/v1.0.9/dramaplayer-1.0.9.apk",
+    "apk_url": "https://github.com/hdoonline/dramaplayer/releases/download/v1.1.0/dramaplayer-1.1.0.apk",
+    "mirror_url": "https://cdn.hdo.tv/player/dramaplayer-1.1.0.apk",
     "store_url": "https://play.google.com/store/apps/details?id=com.drama.simpleplayer",
-    "version_build": 9,
+    "version_build": 12,
     "force_player": true,
-    "app_name": "Jennie Player",
-    "sleep_priority_links": 3000,
+    "app_name": "Drama Player Pro",
+    "sleep_priority_links": 2500,
+    "connection_timeout": 10000,
+    "buffer_config": {
+      "initial_buffer": 2000,
+      "min_rebuffer": 500,
+      "max_buffer": 10000
+    },
     "priority_links": [
-      "SERVER F1",
-      "SERVER F2",
-      "SERVER C1",
-      "SERVER C2",
-      "SERVER A1",
-      "SERVER A2"
-    ]
+      {
+        "name": "SERVER F1",
+        "type": "fast",
+        "region": ["NA", "EU"],
+        "formats": ["hls", "dash"]
+      },
+      {
+        "name": "SERVER F2",
+        "type": "fast",
+        "region": ["global"],
+        "formats": ["hls"]
+      },
+      {
+        "name": "SERVER C1",
+        "type": "cdn",
+        "region": ["ASIA"],
+        "formats": ["mp4", "hls"]
+      },
+      {
+        "name": "SERVER C2",
+        "type": "cdn",
+        "region": ["global"],
+        "formats": ["hls"]
+      },
+      {
+        "name": "SERVER A1",
+        "type": "adaptive",
+        "region": ["NA"],
+        "formats": ["dash"]
+      },
+      {
+        "name": "SERVER A2",
+        "type": "adaptive",
+        "region": ["EU"],
+        "formats": ["dash"]
+      }
+    ],
+    "fallback_order": ["F1", "F2", "C1", "C2", "A1", "A2"]
   },
-  "ads_start_remote" : {
-    "enable_admob": true,
-    "enable_applovin": true,
-    "enable_unity": true
+  "ads_config": {
+    "ads_start_remote": {
+      "enable_admob": true,
+      "admob_banner": "ca-app-pub-3940256099942544/6300978111",
+      "admob_interstitial": "ca-app-pub-3940256099942544/1033173712",
+      "enable_applovin": true,
+      "applovin_zone": "a1b2c3d4e5",
+      "enable_unity": false,
+      "frequency_cap": 2,
+      "cooldown": 180000
+    },
+    "ads_back_remote": {
+      "enable_admob": true,
+      "enable_applovin": true,
+      "enable_unity": false,
+      "show_delay": 1000
+    },
+    "ads_midroll": {
+      "enabled": true,
+      "interval": 900000,
+      "max_per_session": 3
+    },
+    "ad_waterfall": ["admob", "applovin", "unity"]
   },
-  "ads_back_remote" : {
-    "enable_admob": true,
-    "enable_applovin": true,
-    "enable_unity": true
+  "performance": {
+    "cache_ttl": 3600000,
+    "prefetch_links": 3,
+    "connection_timeout": 15000,
+    "retry_policy": {
+      "max_attempts": 3,
+      "backoff_multiplier": 2,
+      "initial_delay": 1000
+    }
+  },
+  "analytics": {
+    "enabled": true,
+    "endpoint": "https://analytics.hdo.tv/v1",
+    "sample_rate": 0.8,
+    "events": ["play", "pause", "error", "quality_change"]
   }
 }
