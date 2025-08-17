@@ -1,5 +1,6 @@
 {
-  "providers": [
+	"providers": [
+
     "dist/providers/vidsrccc.js",
     "dist/providers/uniquestream.js",
     "dist/providers/2embedcc.js",
