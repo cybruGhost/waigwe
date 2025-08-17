@@ -1,31 +1,21 @@
 {
-  "data": [
-    "XVidsrcVip",
-    "RVIDSRC",
-    "VidsrcCC",
-    "PTOWEMBEDCC",
-    "FMOVIES",
-    "CAoneroom",
-    "TomAutoEmbed",
-    "JIdFlix",
-    "MVidlink",
-    "BVidfast",
-    "LRIDOMOVIE",
-    "YMovies",
-    "IYesMovies",
-    "DUniqueStream",
-    "Primewire",
-    "AVidora",
-    "NHollyMovieHD"
-  ],
-  "config": {
-    "priority": {
-      "primary": ["XVidsrcVip", "RVIDSRC", "VidsrcCC"],
-      "secondary": ["PTOWEMBEDCC", "FlixHQ", "CAoneroom"],
-      "fallback": ["TomAutoEmbed", "JIdFlix", "MVidlink"]
-    },
-    "timeout": 10000,
-    "retry": 2,
-    "health_check": true
-  }
+    "data": [
+        "FlixHQ",
+        "JIdFlix",
+        "RVIDSRC",
+        "LRIDOMOVIE",
+        "YMovies",
+        "DUniqueStream",
+        "XVidsrcVip",
+        "PTOWEMBEDCC",
+        "MVidlink",
+        "IYesMovies",
+        "TomAutoEmbed",
+        "Primewire",
+        "CAoneroom",
+        "BVidfast",
+        "AVidora",
+        "NHollyMovieHD",
+        "VidsrcCC"
+    ]
 }
