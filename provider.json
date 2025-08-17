@@ -1,33 +1,71 @@
 {
-	"providers": [
-
-    "dist/providers/vidsrccc.js",
-    "dist/providers/uniquestream.js",
-    "dist/providers/2embedcc.js",
-    "dist/providers/aoneroom.js",
-    "dist/providers/idflix.js",
-    "dist/providers/vidlink.js",
-    "dist/providers/fmovies.js",
-    "dist/providers/vidsrc.js",
-    "dist/providers/tomautoembed.js",
-    "dist/providers/vidsrcpro.js",
-    "dist/providers/ymovies.js",
-    "dist/providers/yesmovies.js",
-    "dist/providers/ridomovie.js",
-    "dist/providers/flixhq.js",
-    "dist/providers/cineb.js",
-    "dist/providers/primewire.js",
-    "dist/providers/loklok.js",
-    "dist/providers/emovies.js",
-    "dist/providers/soap2day.js",
-    "dist/providers/m4ufree.js",
-    "dist/providers/watchonline.js",
-    "dist/providers/vumoo.js",
-    "dist/providers/catflix.js",
-    "dist/providers/streamflix.js",
-    "dist/providers/cinecalidad.js",
-    "dist/providers/susflix.js",
-    "dist/providers/rezka.js",
-    "dist/providers/blackvid.js"
-  ]
+  "meta": {
+    "config_version": "3.2.0",
+    "last_updated": "2023-11-20",
+    "recommended_cache_ttl": 3600
+  },
+  "providers": {
+    "tier1": [
+      "dist/providers/vidsrcpro.js",
+      "dist/providers/vidsrc.js",
+      "dist/providers/flixhq.js",
+      "dist/providers/cineb.js"
+    ],
+    "tier2": [
+      "dist/providers/2embedcc.js",
+      "dist/providers/loklok.js",
+      "dist/providers/rezka.js",
+      "dist/providers/m4ufree.js"
+    ],
+    "tier3": [
+      "dist/providers/vidsrccc.js",
+      "dist/providers/uniquestream.js",
+      "dist/providers/ridomovie.js",
+      "dist/providers/tomautoembed.js"
+    ],
+    "specialty": {
+      "asian_content": "dist/providers/loklok.js",
+      "spanish_content": "dist/providers/cinecalidad.js",
+      "russian_content": "dist/providers/rezka.js",
+      "anime": "dist/providers/vumoo.js"
+    }
+  },
+  "optimization": {
+    "timeout_ms": 8000,
+    "max_parallel_requests": 4,
+    "retry_policy": {
+      "attempts": 2,
+      "delay_ms": 1500
+    }
+  },
+  "quality_priorities": {
+    "4k": ["vidsrcpro", "cineb"],
+    "1080p": ["flixhq", "vidsrc"],
+    "720p": ["2embedcc", "m4ufree"],
+    "sd_fallback": ["primewire", "soap2day"]
+  },
+  "regional_optimization": {
+    "north_america": ["vidsrcpro", "flixhq", "2embedcc"],
+    "europe": ["vidsrc", "cineb", "rezka"],
+    "asia": ["loklok", "vidsrccc"],
+    "latin_america": ["cinecalidad", "m4ufree"]
+  },
+  "maintenance": {
+    "disabled_providers": ["emovies", "blackvid"],
+    "under_maintenance": ["catflix"],
+    "new_additions": ["streamflix", "susflix"]
+  },
+  "analytics": {
+    "success_rates": {
+      "vidsrcpro": 92,
+      "flixhq": 88,
+      "cineb": 85,
+      "2embedcc": 82
+    },
+    "avg_response_time_ms": {
+      "vidsrcpro": 1200,
+      "flixhq": 1800,
+      "cineb": 2000
+    }
+  }
 }
