@@ -8,7 +8,7 @@
 "dist/providers/vidlink.js",
 "dist/providers/aoneroom.js",
 "dist/providers/idflix.js",
-"dist/providers/fmovies.js",
+"dist/providers/flixhq.js",
 "dist/providers/vidsrc.js",
 "dist/providers/tomautoembed.js",
 "dist/providers/vidsrcpro.js",
