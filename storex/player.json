@@ -1,21 +1,34 @@
 {
-  "notification": {
-    "url": "https://github.com/",
-    "title": "Welcome!",
-    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 😀 😃<br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
-    "show": false
-  },
   "update_release": {
-    "build": 100,
-    "forceUpdate": false,
-    "isUpdate": false
+    "build": 16,
+    "url": "https://github.com/hdoonline/hdotv/releases/download/v2.1.3/hdotv-2.1.3.apk",
+    "contents": "There is a new update, please download to experience.",
+    "force_update": false
   },
-  "ads_config" : {
-    "show_start": true,
-    "show": true,
-    "session_time": 120
+  "app_player_config": {
+    "player_apk_url": "https://github.com/hdoonline/player/releases/download/v1.0.18/mediaon-1.0.18.apk",
+    "player_version_build": 18,
+    "player_is_install_force": false,
+    "force_player": true
   },
-  "ads_init" : "admob",
+  "switch_player_config": {
+    "package_name": "com.drama.simpleplayer",
+    "activity_name": "com.drama.simpleplayer.PlayerActivity",
+    "apk_url": "https://github.com/hdoonline/dramaplayer/releases/download/v1.0.9/dramaplayer-1.0.9.apk",
+    "store_url": "https://play.google.com/store/apps/details?id=com.drama.simpleplayer",
+    "version_build": 9,
+    "force_player": true,
+    "app_name": "Jennie Player",
+    "sleep_priority_links": 3000,
+    "priority_links": [
+      "SERVER F1",
+      "SERVER F2",
+      "SERVER C1",
+      "SERVER C2",
+      "SERVER A1",
+      "SERVER A2"
+    ]
+  },
   "ads_start_remote" : {
     "enable_admob": true,
     "enable_applovin": true,
@@ -25,10 +38,5 @@
     "enable_admob": true,
     "enable_applovin": true,
     "enable_unity": true
-  },
-  "unity_remote" : {
-    "sdk_key": "5243515",
-    "unit_id": "Interstitial_Android"
-  },
-  "enable_open_admob": true
+  }
 }
