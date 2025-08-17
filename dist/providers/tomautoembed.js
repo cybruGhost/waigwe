@@ -7,113 +7,146 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (g && (g = 0, op[0] && (_ = 0)), _) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-var _this = this;
-source.getResource = function (movieInfo, config, callback) { return __awaiter(_this, void 0, void 0, function () {
-    var PROVIDER, DOMAIN, headers, decryptWithPassword, _i, _a, serverID, urlDirect, dataDirect, t, a, decryptData, directUrl, e_1;
-    return __generator(this, function (_b) {
-        switch (_b.label) {
-            case 0:
-                PROVIDER = 'TomAutoEmbed';
-                DOMAIN = "https://test.autoembed.cc";
-                headers = {
-                    'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
-                    'Referer': "".concat(DOMAIN, "/"),
-                    'Origin': DOMAIN,
-                };
-                _b.label = 1;
-            case 1:
-                _b.trys.push([1, 6, , 7]);
-                decryptWithPassword = function (e) {
-                    var t = cryptoS.enc.Hex.parse(e.salt);
-                    var a = cryptoS.enc.Hex.parse(e.iv);
-                    var l = e.encryptedData;
-                    var n = cryptoS.PBKDF2(e.key, t, {
-                        keySize: 8,
-                        iterations: e.iterations,
-                        hasher: cryptoS.algo.SHA256
-                    });
-                    var s = cryptoS.AES.decrypt(l, n, {
-                        iv: a,
-                        padding: cryptoS.pad.Pkcs7,
-                        mode: cryptoS.mode.CBC
-                    }).toString(cryptoS.enc.Utf8);
-                    if (!s) {
-                        throw Error("Decryption failed: Invalid key or malformed data.");
+
+source.getResource = function (movieInfo, config, callback) {
+    return __awaiter(this, void 0, void 0, function () {
+        var PROVIDER, DOMAIN, headers, decryptWithPassword, serverIDs, _i, serverIDs_1, serverID, urlDirect, dataDirect, decodedData, encryptedData, decryptedData, directUrl, e_1;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    PROVIDER = 'TomAutoEmbed';
+                    DOMAIN = "https://test.autoembed.cc";
+                    headers = {
+                        'user-agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+                        'Referer': DOMAIN + "/",
+                        'Origin': DOMAIN,
+                    };
+                    
+                    // Enhanced decryption function with better error handling
+                    decryptWithPassword = function (encryptedObj) {
+                        try {
+                            if (!encryptedObj || !encryptedObj.salt || !encryptedObj.iv || !encryptedObj.encryptedData || !encryptedObj.key) {
+                                throw new Error("Invalid encrypted data structure");
+                            }
+                            
+                            var salt = cryptoS.enc.Hex.parse(encryptedObj.salt);
+                            var iv = cryptoS.enc.Hex.parse(encryptedObj.iv);
+                            var encrypted = encryptedObj.encryptedData;
+                            
+                            var key = cryptoS.PBKDF2(encryptedObj.key, salt, {
+                                keySize: 8,
+                                iterations: encryptedObj.iterations || 1000,
+                                hasher: cryptoS.algo.SHA256
+                            });
+                            
+                            var decrypted = cryptoS.AES.decrypt(encrypted, key, {
+                                iv: iv,
+                                padding: cryptoS.pad.Pkcs7,
+                                mode: cryptoS.mode.CBC
+                            }).toString(cryptoS.enc.Utf8);
+                            
+                            if (!decrypted) {
+                                throw new Error("Decryption failed - empty result");
+                            }
+                            
+                            return JSON.parse(decrypted);
+                        } catch (error) {
+                            libs.log({ error: error.message }, PROVIDER, "DECRYPTION ERROR");
+                            throw error;
+                        }
+                    };
+                    
+                    _a.label = 1;
+                case 1:
+                    _a.trys.push([1, 7, , 8]);
+                    serverIDs = [1, 2, 3, 4]; // Server IDs to try
+                    _i = 0, serverIDs_1 = serverIDs;
+                    _a.label = 2;
+                case 2:
+                    if (!(_i < serverIDs_1.length)) return [3, 6];
+                    serverID = serverIDs_1[_i];
+                    
+                    // Build URL based on media type
+                    if (movieInfo.type === "movie") {
+                        urlDirect = DOMAIN + "/api/server?id=" + movieInfo.tmdb_id + "&sr=" + serverID;
+                    } else {
+                        urlDirect = DOMAIN + "/api/server?id=" + movieInfo.tmdb_id + "&sr=" + serverID + 
+                                   "&ep=" + (movieInfo.episode || 1) + "&ss=" + (movieInfo.season || 1);
                     }
-                    return JSON.parse(s);
-                };
-                _i = 0, _a = [1, 2, 3, 4];
-                _b.label = 2;
-            case 2:
-                if (!(_i < _a.length)) return [3, 5];
-                serverID = _a[_i];
-                urlDirect = "".concat(DOMAIN, "/api/server?id=").concat(movieInfo.tmdb_id, "&sr=").concat(serverID, "&ep=").concat(movieInfo.episode, "&ss=").concat(movieInfo.season);
-                if (movieInfo.type == "movie") {
-                    urlDirect = "".concat(DOMAIN, "/api/server?id=").concat(movieInfo.tmdb_id, "&sr=").concat(serverID);
-                }
-                libs.log({ urlDirect: urlDirect }, PROVIDER, "URL DIRECT");
-                return [4, libs.request_get(urlDirect, headers, false)];
-            case 3:
-                dataDirect = _b.sent();
-                libs.log({ dataDirect: dataDirect }, PROVIDER, "DATA DIRECT");
-                if (!dataDirect.data) {
-                    return [3, 4];
-                }
-                t = libs.string_atob(dataDirect.data);
-                a = JSON.parse(t);
-                libs.log({ a: a }, PROVIDER, "A DATA");
-                decryptData = decryptWithPassword(a);
-                libs.log({ decryptData: decryptData }, PROVIDER, "DECRYPT DATA");
-                if (!decryptData.url) {
-                    return [3, 4];
-                }
-                if (!_.startsWith(decryptData.url, "/")) {
-                    return [3, 4];
-                }
-                if (decryptData.url.indexOf("/api/embed-proxy") == -1) {
-                    return [3, 4];
-                }
-                directUrl = "".concat(DOMAIN).concat(decryptData.url);
-                libs.embed_callback(directUrl, PROVIDER, PROVIDER, 'hls', callback, 1, [], [{ file: directUrl, quality: 1080 }], headers, {
-                    type: "m3u8"
-                });
-                _b.label = 4;
-            case 4:
-                _i++;
-                return [3, 2];
-            case 5: return [3, 7];
-            case 6:
-                e_1 = _b.sent();
-                libs.log({ e: e_1 }, PROVIDER, "ERROR");
-                return [3, 7];
-            case 7: return [2];
-        }
+                    
+                    libs.log({ url: urlDirect }, PROVIDER, "TRYING SERVER " + serverID);
+                    return [4, libs.request_get(urlDirect, headers, false)];
+                case 3:
+                    dataDirect = _a.sent();
+                    
+                    if (!dataDirect || !dataDirect.data) {
+                        libs.log({ server: serverID, status: "No data" }, PROVIDER, "SERVER FAILED");
+                        return [3, 5];
+                    }
+                    
+                    try {
+                        // Decode and parse the base64 data
+                        decodedData = libs.string_atob(dataDirect.data);
+                        encryptedData = JSON.parse(decodedData);
+                        libs.log({ encryptedData: encryptedData }, PROVIDER, "ENCRYPTED DATA");
+                        
+                        // Decrypt the data
+                        decryptedData = decryptWithPassword(encryptedData);
+                        libs.log({ decryptedData: decryptedData }, PROVIDER, "DECRYPTED DATA");
+                        
+                        // Validate the URL
+                        if (!decryptedData.url || typeof decryptedData.url !== "string") {
+                            throw new Error("Invalid URL in decrypted data");
+                        }
+                        
+                        if (!decryptedData.url.startsWith("/") || 
+                            !decryptedData.url.includes("/api/embed-proxy")) {
+                            throw new Error("URL format invalid");
+                        }
+                        
+                        // Build final URL and return
+                        directUrl = DOMAIN + decryptedData.url;
+                        libs.log({ url: directUrl }, PROVIDER, "FINAL URL");
+                        
+                        libs.embed_callback(
+                            directUrl, 
+                            PROVIDER, 
+                            PROVIDER, 
+                            'hls', 
+                            callback, 
+                            1, 
+                            [], 
+                            [{ file: directUrl, quality: 1080 }], 
+                            headers, 
+                            { type: "m3u8" }
+                        );
+                        
+                        return [2]; // Exit early if successful
+                    } catch (parseError) {
+                        libs.log({
+                            server: serverID,
+                            error: parseError.message
+                        }, PROVIDER, "PARSE/DECRYPT ERROR");
+                    }
+                    _a.label = 4;
+                case 4:
+                    _i++;
+                    return [3, 2];
+                case 5:
+                    return [3, 2];
+                case 6:
+                    libs.log({ status: "All servers failed" }, PROVIDER, "FINAL RESULT");
+                    return [3, 8];
+                case 7:
+                    e_1 = _a.sent();
+                    libs.log({
+                        error: e_1.message,
+                        stack: e_1.stack
+                    }, PROVIDER, "GLOBAL ERROR");
+                    return [3, 8];
+                case 8:
+                    return [2];
+            }
+        });
     });
-}); };
+};
