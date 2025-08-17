@@ -21,7 +21,7 @@
   "config": {
     "priority": {
       "primary": ["XVidsrcVip", "RVIDSRC", "VidsrcCC"],
-      "secondary": ["PTOWEMBEDCC", "FMOVIES", "CAoneroom"],
+      "secondary": ["PTOWEMBEDCC", "FlixHQ", "CAoneroom"],
       "fallback": ["TomAutoEmbed", "JIdFlix", "MVidlink"]
     },
     "timeout": 10000,
