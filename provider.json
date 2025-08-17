@@ -1,17 +1,7 @@
-{
-  "providers": [
-    "dist/providers/vidsrc.js",
-    "dist/providers/2embedcc.js",
-    "dist/providers/flixhq.js",
-    "dist/providers/loklok.js"
-  ],
-  "fallback_order": [
-    "dist/providers/m4ufree.js",
-    "dist/providers/cineb.js"
-  ],
-  "settings": {
-    "timeout": 10000,
-    "max_retries": 2,
-    "enable_logging": true
-  }
+ {
+	"providers": [
+
+    "dist/providers/tomautoembed.js"
+
+  ]
 }
