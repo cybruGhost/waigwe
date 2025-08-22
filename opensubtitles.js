@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 subs.getResource = function (movieInfo, config, callback) { return __awaiter(_this, void 0, void 0, function () {
-    var PROVIDER, DOMAIN, subLang, subLanguageIds, url, headers, _i, subLanguageIds_1, item, urlLang, responseLang, dataLang, _a, dataLang_1, itemLang, fileName, lang, season, episode, downloadLink, e_1;
+    var PROVIDER, DOMAIN, subLang, subLanguageIds, url, _i, subLanguageIds_1, item, urlLang, responseLang, dataLang, _a, dataLang_1, itemLang, fileName, lang, season, episode, e_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -86,11 +86,6 @@ subs.getResource = function (movieInfo, config, callback) { return __awaiter(_th
                     { name: 'Indonesian', id: 'ind' },
                 ];
                 url = "https://rest.opensubtitles.org/search/imdbid-".concat(movieInfo.imdb_id.replace("tt", ""));
-                headers = {
-                    "X-User-Agent": "VLSub 0.10.2",
-                    "Accept": "application/json",
-                    "Content-Type": "application/json"
-                };
                 libs.log({ url: url }, PROVIDER, "URL SEARCH");
                 _i = 0, subLanguageIds_1 = subLanguageIds;
                 _b.label = 2;
@@ -100,60 +95,53 @@ subs.getResource = function (movieInfo, config, callback) { return __awaiter(_th
                 urlLang = "https://rest.opensubtitles.org/search/imdbid-".concat(movieInfo.imdb_id.replace("tt", ""), "/sublanguageid-").concat(item.id);
                 return [4, fetch(urlLang, {
                         method: "GET",
-                        headers: headers,
-                        timeout: 10000 // Added timeout
-                    }).catch(function (error) {
-                        libs.log({ error: error, url: urlLang }, PROVIDER, "FETCH ERROR");
-                        return null;
+                        headers: {
+                            "x-user-agent": "VLSub 0.10.2",
+                        },
                     })];
             case 3:
                 responseLang = _b.sent();
-                if (!responseLang || !responseLang.ok) {
-                    libs.log({ status: responseLang ? responseLang.status : 'no response', url: urlLang }, PROVIDER, "RESPONSE ERROR");
-                    return [3, 5];
-                }
-                return [4, responseLang.json().catch(function (error) {
-                        libs.log({ error: error }, PROVIDER, "JSON PARSE ERROR");
-                        return [];
-                    })];
+                return [4, responseLang.json()];
             case 4:
                 dataLang = _b.sent();
-                if (!Array.isArray(dataLang)) {
-                    libs.log({ data: dataLang }, PROVIDER, "INVALID DATA FORMAT");
-                    return [3, 5];
-                }
-                libs.log({ urlLang: urlLang, item: item, count: dataLang.length }, PROVIDER, "URL SEARCH LANG");
+                libs.log({ urlLang: urlLang, dataLang: dataLang, item: item }, PROVIDER, "URL SEARCH LANG");
                 for (_a = 0, dataLang_1 = dataLang; _a < dataLang_1.length; _a++) {
                     itemLang = dataLang_1[_a];
                     fileName = itemLang.SubFileName;
-                    lang = (itemLang.SubLanguageID || '').toLowerCase();
-                    downloadLink = itemLang.ZipDownloadLink || itemLang.SubDownloadLink;
-                    libs.log({ fileName: fileName, langID: itemLang.SubLanguageID, downloadLink: downloadLink }, PROVIDER, "ITEM INFO");
+                    lang = itemLang.SubLanguageID.toLowerCase();
+                    libs.log({ fileName: fileName, langID: itemLang.SubLanguageID, zip: itemLang.ZipDownloadLink }, PROVIDER, "ITEM INFO");
                     if (movieInfo.type == "tv") {
-                        season = Number(itemLang.SeriesSeason || 0);
-                        episode = Number(itemLang.SeriesEpisode || 0);
+                        season = Number(itemLang.SeriesSeason);
+                        episode = Number(itemLang.SeriesEpisode);
                         libs.log({
                             episode: episode,
                             season: season,
                             fileName: fileName,
                             lang: lang,
-                            downloadLink: downloadLink,
+                            zip: itemLang.ZipDownloadLink,
+                            movieInfo: movieInfo,
                         }, PROVIDER, "EPISODE COMPARE");
                         if (movieInfo.season !== season || movieInfo.episode !== episode) {
                             continue;
                         }
                     }
-                    if (!subLang[lang] || !downloadLink) {
+                    libs.log({ lang: lang, subLang: subLang[lang], zip: itemLang.ZipDownloadLink }, PROVIDER, "LANG INFO");
+                    if (!subLang[lang]) {
                         continue;
                     }
-                    libs.log({ fileName: fileName, lang: subLang[lang], downloadLink: downloadLink }, PROVIDER, "ITEM INFO PASS==>");
+                    if (!itemLang.ZipDownloadLink) {
+                        continue;
+                    }
+                    libs.log({ fileName: fileName, lang: lang, zip: itemLang.ZipDownloadLink }, PROVIDER, "ITEM INFO PASS==>");
                     callback({
-                        file: downloadLink,
+                        file: itemLang.ZipDownloadLink,
                         kind: "Captions",
                         label: subLang[lang],
                         type: "zip",
                         provider: PROVIDER,
-                        headers: headers,
+                        headers: {
+                            "x-user-agent": "VLSub 0.10.2",
+                        },
                     });
                 }
                 _b.label = 5;
@@ -163,7 +151,7 @@ subs.getResource = function (movieInfo, config, callback) { return __awaiter(_th
             case 6: return [3, 8];
             case 7:
                 e_1 = _b.sent();
-                libs.log({ error: e_1.message, stack: e_1.stack }, PROVIDER, "ERROR");
+                libs.log({ e: e_1 }, PROVIDER, "ERROR");
                 return [3, 8];
             case 8: return [2, true];
         }
