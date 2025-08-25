@@ -10,25 +10,52 @@
     "forceUpdate": false,
     "isUpdate": false
   },
-  "ads_config" : {
+  "ads_config": {
     "show_start": false,
     "show": true,
     "session_time": 120
   },
-  "ads_init" : "admob",
-  "ads_start_remote" : {
+  "ads_init": "admob",
+  "ads_start_remote": {
     "enable_admob": false,
     "enable_applovin": false,
     "enable_unity": false
   },
-  "ads_back_remote" : {
+  "ads_back_remote": {
     "enable_admob": true,
     "enable_applovin": true,
     "enable_unity": true
   },
-  "unity_remote" : {
+  "unity_remote": {
     "sdk_key": "5243515",
     "unit_id": "Interstitial_Android"
   },
-  "enable_open_admob": true
+  "enable_open_admob": true,
+  "server": "F1",
+  "qualities": [
+    {
+      "name": "360p",
+      "type": "low",
+      "region": ["global"],
+      "formats": ["mp4", "hls"]
+    },
+    {
+      "name": "450p",
+      "type": "medium",
+      "region": ["global"],
+      "formats": ["mp4", "hls"]
+    },
+    {
+      "name": "720p",
+      "type": "high",
+      "region": ["global", "NA", "EU"],
+      "formats": ["mp4", "hls", "dash"]
+    },
+    {
+      "name": "1080p",
+      "type": "fullhd",
+      "region": ["NA", "EU"],
+      "formats": ["dash", "hls"]
+    }
+  ]
 }
