@@ -34,6 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+
 var _this = this;
 subs.getResource = function (movieInfo, config, callback) { return __awaiter(_this, void 0, void 0, function () {
     var PROVIDER, DOMAIN, subLang, subLanguageIds, url, _i, subLanguageIds_1, item, urlLang, responseLang, dataLang, _a, dataLang_1, itemLang, fileName, lang, season, episode, e_1;
@@ -151,9 +152,35 @@ subs.getResource = function (movieInfo, config, callback) { return __awaiter(_th
             case 6: return [3, 8];
             case 7:
                 e_1 = _b.sent();
-                libs.log({ e: e_1 }, PROVIDER, "ERROR");
+                libs.log({ e: e_1 }, PROVIDER, "ERROR FETCHING SUBTITLES");
+                // Fallback to alternative subtitle provider
+                fetchAlternativeSubtitles(movieInfo, callback);  // Fallback function
                 return [3, 8];
-            case 8: return [2, true];
+            case 8: return [2];
         }
     });
-}); };
+});};
+
+// Fallback function to fetch subtitles from an alternative provider like YIFY or Subscene
+function fetchAlternativeSubtitles(movieInfo, callback) {
+    const altProvider = "YIFY";  // Example fallback provider
+    const altUrl = `https://yts-subs.com/movie-imdb/${movieInfo.imdb_id}`;
+
+    fetch(altUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the data and call callback
+            if (data && data.subtitles) {
+                callback({
+                    file: data.subtitles[0].download_url,
+                    kind: "Captions",
+                    label: "English",  // Default language or detect based on the response
+                    type: "zip",
+                    provider: altProvider,
+                });
+            }
+        })
+        .catch(err => {
+            libs.log({ err }, altProvider, "ERROR FALLBACK PROVIDER");
+        });
+}
