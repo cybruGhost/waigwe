@@ -39,7 +39,7 @@ libs.tmdb_movie_info = function (id, lang) { return __awaiter(_this, void 0, voi
     var configData, API_KEY, url, result;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, libs.request_get("https://raw.githubusercontent.com/lulunnqqq/configs/main/data.json")];
+            case 0: return [4, libs.request_get("https://raw.githubusercontent.com/cybruGhost/Cubeapp/main/wantam.json")];
             case 1:
                 configData = _a.sent();
                 API_KEY = configData.tmdb_apikey.web_key;
@@ -57,7 +57,7 @@ libs.tmdb_tv_info = function (id, lang) { return __awaiter(_this, void 0, void 0
     var configData, API_KEY, url, result;
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4, libs.request_get("https://raw.githubusercontent.com/lulunnqqq/configs/main/data.json")];
+            case 0: return [4, libs.request_get("https://raw.githubusercontent.com/cybruGhost/Cubeapp/main/wantam.json")];
             case 1:
                 configData = _a.sent();
                 API_KEY = configData.tmdb_apikey.web_key;
