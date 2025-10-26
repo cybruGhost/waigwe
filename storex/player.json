@@ -1,6 +1,6 @@
 {
   "notification": {
-    "url": "htttav2.",
+    "url": "httav2.",
     "title": "Welcome!",
     "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future <br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
     "show": true
@@ -31,7 +31,9 @@
     "unit_id": "Interstitial_Android"
   },
   "enable_open_admob": true,
-  "server": "F1",
+  "server": "C1",
+  "server_c1": "C1",
+  "server_r1": "R1",
   "qualities": [
     {
       "name": "360p",
