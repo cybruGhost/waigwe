@@ -3,7 +3,7 @@
     "url": "htttav2.",
     "title": "Welcome!",
     "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future <br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
-    "show": false
+    "show": true
   },
   "update_release": {
     "build": 100,
@@ -27,7 +27,7 @@
     "enable_unity": true
   },
   "unity_remote": {
-    "sdk_key": "5243515",
+    "sdk_key": "523515",
     "unit_id": "Interstitial_Android"
   },
   "enable_open_admob": true,
