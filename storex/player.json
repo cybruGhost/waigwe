@@ -3,7 +3,9 @@
     "url": "httav2.",
     "title": "Welcome!",
     "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future <br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
-    "show": true
+    "show": true,
+    "btn_title": "Visit",
+    "key": "NOTI_1.9"
   },
   "update_release": {
     "build": 100,
