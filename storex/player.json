@@ -1,63 +1,67 @@
 {
   "notification": {
-    "url": "httav2.",
+    "url": "hdhd",
     "title": "Welcome!",
-    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future <br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
-    "show": true
+    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 😀 😃<br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
+    "show": false
   },
   "update_release": {
     "build": 100,
     "forceUpdate": false,
     "isUpdate": false
   },
-  "ads_config": {
-    "show_start": false,
+  "ads_config" : {
+    "show_start": true,
     "show": true,
     "session_time": 120
   },
-  "ads_init": "admob",
-  "ads_start_remote": {
-    "enable_admob": false,
-    "enable_applovin": false,
-    "enable_unity": false
-  },
-  "ads_back_remote": {
+  "ads_init" : "admob",
+  "ads_start_remote" : {
     "enable_admob": true,
     "enable_applovin": true,
     "enable_unity": true
   },
-  "unity_remote": {
-    "sdk_key": "523515",
+  "ads_back_remote" : {
+    "enable_admob": true,
+    "enable_applovin": true,
+    "enable_unity": true
+  },
+  "unity_remote" : {
+    "sdk_key": "5243515",
     "unit_id": "Interstitial_Android"
   },
-  "enable_open_admob": true,
-  "server": "C1",
-  "server_c1": "C1",
-  "server_r1": "R1",
-  "qualities": [
-    {
-      "name": "360p",
-      "type": "low",
-      "region": ["global"],
-      "formats": ["mp4", "hls"]
-    },
-    {
-      "name": "450p",
-      "type": "medium",
-      "region": ["global"],
-      "formats": ["mp4", "hls"]
-    },
-    {
-      "name": "720p",
-      "type": "high",
-      "region": ["global", "NA", "EU"],
-      "formats": ["mp4", "hls", "dash"]
-    },
-    {
-      "name": "1080p",
-      "type": "fullhd",
-      "region": ["NA", "EU"],
-      "formats": ["dash", "hls"]
-    }
-  ]
+  "enable_open_admob": true
+}{
+  "notification": {
+    "url": "https:apk",
+    "title": "Welcome!",
+    "contents": "<p>- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 😀 😃<br />- Due the app has been removed from Store, please DO NOT removed it to use the app in the future 🤶🏼 🧑🏼‍🎄</p>",
+    "show": false
+  },
+  "update_release": {
+    "build": 100,
+    "forceUpdate": false,
+    "isUpdate": false
+  },
+  "ads_config" : {
+    "show_start": true,
+    "show": true,
+    "session_time": 120
+  },
+  "ads_init" : "admob",
+  "ads_start_remote" : {
+    "enable_admob": true,
+    "enable_applovin": true,
+    "enable_unity": true
+  },
+  "ads_back_remote" : {
+    "enable_admob": true,
+    "enable_applovin": true,
+    "enable_unity": true
+  },
+  "unity_remote" : {
+    "sdk_key": "5243515",
+    "unit_id": "Interstitial_Android"
+  },
+  "enable_open_admob": true
 }
