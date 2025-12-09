@@ -11,7 +11,7 @@
 "dist/providers/vidsrcpro.j",
 "dist/providers/fmovies.js",
 "dist/providers/ymovies.js",
-"dist/providers/videasy.j",
+"dist/providers/videasy.js",
 "dist/providers/vixsrc.js",
 "dist/providers/vidsrcvip.js",
 "dist/providers/uniquestream.js",
