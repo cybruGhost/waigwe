@@ -14,6 +14,7 @@
 "dist/providers/vidsrc.js",
 "dist/providers/tomautoembed.js",
 "dist/providers/vidsrcpro.js",
+"dist/providers/fmovies.js",
 "dist/providers/ymovies.js",
 "dist/providers/yesmovies.js",
 "dist/providers/ridomovie.js",
