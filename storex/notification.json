@@ -2,7 +2,7 @@
   "notification": {
     "version": "v1.7.5",
     "url": "https://your-app.com/premium",
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxo9ZJX_XGHMZCZH0k2QbR3-wUo9wIfbiHZA&s",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__lgqu27B_-Vu5F36vEcAgjy30naAGUzIYQ&s",
     "title": "Go Premium! ✨",
     "contents": "Unlock unlimited downloads and ad-free experience",
     "show": true,
