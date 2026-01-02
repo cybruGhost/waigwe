@@ -1,13 +1,13 @@
 {
   "notification": {
-    "version": "v1.7.5",
-    "url": "https://your-app.com/premium",
+    "version": "v1.7.6",
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__lgqu27B_-Vu5F36vEcAgjy30naAGUzIYQ&s",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR__lgqu27B_-Vu5F36vEcAgjy30naAGUzIYQ&s",
     "title": "Go Premium! ✨",
     "contents": "Unlock unlimited downloads and ad-free experience",
     "show": true,
-    "is_force": false,
-    "force_update": false,
-    "isUpdate": false
+    "is_force": true,
+    "force_update": true,
+    "isUpdate": true
   }
 }
