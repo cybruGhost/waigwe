@@ -8,6 +8,6 @@
     "show": true,
     "is_force": false,
     "force_update": false,
-    "isUpdate": false
+    "isUpdate": true
   }
 }
