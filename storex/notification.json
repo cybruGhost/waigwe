@@ -6,8 +6,8 @@
     "title": "Go Premium! ✨",
     "contents": "Unlock unlimited downloads and ad-free experience",
     "show": true,
-    "is_force": true,      // ← Force users to see
-    "force_update": true,  // ← Emergency update
+    "is_force": true,
+    "force_update": true,
     "isUpdate": true
   }
 }
