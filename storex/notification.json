@@ -1,9 +1,10 @@
 {
   "notification": {
     "version": "v1.7.5",
-    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqM86dEPfydBZKUD5ULewVWLTAv3FBAGQwkw&s",
-    "title": "Go Premium! ✨",
-    "contents": "Unlock unlimited downloads and ad-free experience",
+    "url": "https://thecub.netlify.app/",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFiss6RH_jxWHn6zQo1_dCxm51ZZF4Y32Ow&s",
+    "title": "🎵 Enjoy Music Non-Stop!",
+    "contents": "Discover new tracks, create playlists, and listen ad-free—all for free! 🚀✨",
     "show": true,
     "is_force": true,
     "force_update": true,
