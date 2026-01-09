@@ -1,23 +1,13 @@
 {
   "notification": {
     "version": "v1.7.6",
-    "url": "https://thecub.netlify.app/support",
+    "url": "https://support-pal-global.lovable.app",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPFiss6RH_jxWHn6zQo1_dCxm51ZZF4Y32Ow&s",
     "title": "❤️ Support Development ❤️",
-    "contents": "Keep the music playing 🎶\nSupport Cubic Music by donating via PayPal or M-Pesa.\nEvery contribution helps improve features & keep it free 🚀",
+    "contents": "Keep the music playing 🎶\nSupport Cubic Music via PayPal or M-Pesa ❤️",
     "show": true,
-    "is_force": false,
-    "force_update": false,
-    "isUpdate": false,
-    "actions": [
-      {
-        "label": "💳 Donate via PayPal",
-        "url": "https://www.paypal.me/YOUR_PAYPAL_USERNAME"
-      },
-      {
-        "label": "📱 Donate via M-Pesa",
-        "url": "https://thecub.netlify.app/mpesa"
-      }
-    ]
+    "is_force": true,
+    "force_update": true,
+    "isUpdate": true
   }
 }
