@@ -1,0 +1,34 @@
+{
+	"hosts": [	
+		
+	"dist/hosts/streamlare.js",
+	"dist/hosts/streamrapid.js",
+	"dist/hosts/playmezzz.js",
+	"dist/hosts/playm4u.js",
+	"dist/hosts/vizcloud2.js",
+	"dist/hosts/vidembed.js",
+	"dist/hosts/mzzcloud.js",
+	"dist/hosts/streamhub.js",
+	"dist/hosts/dokicloud.js",
+	"dist/hosts/pelisplay.js",
+	"dist/hosts/fembedHd.js",
+	"dist/hosts/vanfem.js",
+	"dist/hosts/rabbitstream.js",
+	"dist/hosts/streamsss.js",
+	"dist/hosts/membed.js",
+	"dist/hosts/vidcloud9.js",
+	"dist/hosts/play9str_playm4u.js",
+	"dist/hosts/jeniusplay.js",
+	"dist/hosts/streamtape.js",
+	"dist/hosts/mwish.js",
+	"dist/hosts/vidstream.js",
+	"dist/hosts/closeload.js",
+	"dist/hosts/vidplay.js",
+	"dist/hosts/vidcdn.js",
+	"dist/hosts/fstream365.js",
+	"dist/hosts/turbovid.js",
+	"dist/hosts/moviplus.js",
+	"dist/hosts/smashystream.js",
+	"dist/hosts/streamwish.js"
+	]
+}

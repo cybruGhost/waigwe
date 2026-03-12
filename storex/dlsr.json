@@ -1,0 +1,10 @@
+{
+  "notification":{
+    "Build":"10",
+    "url":"https://support-pal-global.lovable.app",
+    "imageUrl":"https://github.com/cybruGhost/waigwe/blob/main/storex/donate.png?raw=true",
+    "title":"❤️ Support Development ❤️",
+    "contents":"Keep the music playing 🎶\nSupport Cubic Music ❤️",
+    "show":true
+  }
+}

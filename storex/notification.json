@@ -1,0 +1,13 @@
+{
+  "notification": {
+    "version": "v1.8.0",
+    "url": "https://support-pal-global.lovable.app",
+    "imageUrl": "https://github.com/cybruGhost/waigwe/blob/main/storex/donate.png?raw=true",
+    "title": "❤️ Support Development ❤️",
+    "contents": "Keep the music playing 🎶\nSupport Cubic Music via PayPal or M-Pesa ❤️Click here to donate❤️❤️",
+    "show": true,
+    "is_force": true,
+    "force_update": true,
+    "isUpdate": true
+  }
+}
