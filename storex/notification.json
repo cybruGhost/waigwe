@@ -5,9 +5,9 @@
     "imageUrl": "https://github.com/cybruGhost/waigwe/blob/main/storex/weare.jpg?raw=true",
     "title": "⚡ Cubic Music Returns ⚡",
     "contents": "We’re back. . 🔥\nCubic Music is preparing for a powerful new release with major improvements, smoother playback, fresh visuals, and a rebuilt experience made for real music lovers 🎶\n\nThank you for staying with us through everything ❤️\nThe next update is dropping soon.",
-    "show": true,
+    "show": false,
     "is_force": false,
     "force_update": false,
-    "isUpdate": true
+    "isUpdate": false
   }
 }
