@@ -1,13 +1,13 @@
 {
   "notification": {
-    "version": "v1.8.0",
+    "version": "v1.8.1",
     "url": "https://support-pal-global.lovable.app",
     "imageUrl": "https://github.com/cybruGhost/waigwe/blob/main/storex/weare.jpg?raw=true",
     "title": "⚡ Cubic Music Returns ⚡",
     "contents": "We’re back. . 🔥\nCubic Music is preparing for a powerful new release with major improvements, smoother playback, fresh visuals, and a rebuilt experience made for real music lovers 🎶\n\nThank you for staying with us through everything ❤️\nThe next update is dropping soon.",
-    "show": false,
-    "is_force": false,
-    "force_update": false,
-    "isUpdate": false
+    "show": true,
+    "is_force": true,
+    "force_update": true,
+    "isUpdate": true
   }
 }
