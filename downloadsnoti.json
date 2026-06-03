@@ -1,6 +1,6 @@
 {
   "maintenance": {
-    "enabled": false,
+    "enabled": true,
     "title": "We'll be right back",
     "message": "The download service is undergoing scheduled maintenance. Sit back and watch something great while you wait!",
     "eta": "2026-06-03T20:00:00Z",
