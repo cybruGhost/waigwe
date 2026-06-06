@@ -1,24 +1,17 @@
 {
-	"providers": [
-
-"dist/providers/hexa.js",
-"dist/providers/fmovies.js",
-"dist/providers/111movies.js",
-"dist/providers/videasy.js",
-"dist/providers/vixsrc.js",
-"dist/providers/vidsrcvip.js",
-"dist/providers/uniquestream.js",
-"dist/providers/2embedcc.js",
-"dist/providers/aoneroom.js",
-"dist/providers/idflix.js",
-"dist/providers/vidsrccc.js",
-"dist/providers/vidlink.js",
-"dist/providers/vidsrc.js",
-"dist/providers/tomautoembed.js",
-"dist/providers/vidsrcpro.js",
-"dist/providers/ymovies.js",
-"dist/providers/yesmovies.js",
-"dist/providers/ridomovie.js",
-"dist/providers/primewire.js"
-	]
+  "providers": [
+    "dist/providers/videasy.js",
+    "dist/providers/vidsrc.js",
+    "dist/providers/vidfast.js",
+    "dist/providers/autoembed.js",
+    "dist/providers/vidlink.js",
+    "dist/providers/vixsrc.js",
+    "dist/providers/twoembed.js",
+    "dist/providers/vidsrcto.js",
+    "dist/providers/smashystream.js",
+    "dist/providers/2now.js",
+    "dist/providers/soap2day.js",
+    "dist/providers/fmovies.js",
+    "dist/providers/streamflix.js"
+  ]
 }
