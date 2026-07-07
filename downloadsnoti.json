@@ -1,11 +1,11 @@
 {
   "maintenance": {
-    "enabled": false,
-    "title": "We'll be right back",
-    "message": "The download service is undergoing scheduled maintenance. Sit back and watch something great while you wait!",
-    "eta": "2026-06-03T20:00:00Z",
-    "watch_url": "https://mywartabola.online/",
-    "watch_label": "Watch something now",
+    "enabled": true,
+    "title": "🚧 Server Migration in Progress",
+    "message": "We're upgrading and migrating to faster, more reliable servers to improve download speeds, stability, and overall performance. During this migration, the download service will be temporarily unavailable. Maintenance is expected to end on 17 July 2026. If you'd like to support these infrastructure upgrades and help us reduce future downtime, please consider purchasing a premium plan. Thank you for your patience and continued support!",
+    "eta": "2026-07-17T23:59:59Z",
+    "watch_url": "https://thecub4.vercel.app/",
+    "watch_label": "Watch something while you wait",
     "watch_embed": "https://vidsrc.to/embed/movie/tt1375666",
     "show_embed": true,
     "accent_color": "#7C3AED"
@@ -13,13 +13,13 @@
   "banner": {
     "enabled": true,
     "type": "info",
-    "message": "🎬 New movies added daily — check back often!",
-    "expires": "2026-06-10T00:00:00Z"
+    "message": "⚡ We're upgrading our servers! Support the project by purchasing Premium to help us build a faster and more reliable service.",
+    "expires": "2026-07-17T23:59:59Z"
   },
   "notice": {
-    "enabled": false,
-    "title": "Quota Reset",
-    "message": "All download quotas have been reset. Enjoy your free downloads!",
-    "type": "success"
+    "enabled": true,
+    "title": "Server Upgrade",
+    "message": "We're migrating to new infrastructure. Maintenance is scheduled to finish on 17 July 2026. Thank you for your patience and support!",
+    "type": "info"
   }
 }
