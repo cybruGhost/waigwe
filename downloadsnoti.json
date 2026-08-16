@@ -2,7 +2,7 @@
   "maintenance": {
     "enabled": true,
     "title": "🚧 Server Migration in Progress",
-    "message": "We're upgrading and migrating to faster, more reliable servers to improve download speeds, stability, and overall performance. During this migration, the download service will be temporarily unavailable. Maintenance is expected to end on 17 July 2026. If you'd like to support these infrastructure upgrades and help us reduce future downtime, please consider purchasing a premium plan. Thank you for your patience and continued support!",
+    "message": "We're upgrading and migrating to faster, more reliable servers to improve download speeds, stability, and overall performance. During this migration, the download service will be temporarily unavailable. Download our app to enjoy streaming. thecub.netlify.app. If you'd like to support these infrastructure upgrades and help us reduce future downtime, please consider purchasing a premium plan. Thank you for your patience and continued support!",
     "eta": "2026-07-17T23:59:59Z",
     "watch_url": "https://thecub4.vercel.app/",
     "watch_label": "Watch something while you wait",
@@ -19,7 +19,7 @@
   "notice": {
     "enabled": true,
     "title": "Server Upgrade",
-    "message": "We're migrating to new infrastructure. Maintenance is scheduled to finish on 17 July 2026. Thank you for your patience and support!",
+    "message": "We're migrating to new infrastructure. Maintenance is scheduled to finish if time allows. Thank you for your patience and support!",
     "type": "info"
   }
 }
