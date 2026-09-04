@@ -11,13 +11,13 @@
     "accent_color": "#7C3AED"
   },
   "banner": {
-    "enabled": true,
+    "enabled": false,
     "type": "info",
     "message": "⚡ We're upgrading our servers! Support the project by purchasing Premium to help us build a faster and more reliable service.",
     "expires": "2026-07-17T23:59:59Z"
   },
   "notice": {
-    "enabled": true,
+    "enabled": false,
     "title": "Server Upgrade",
     "message": "We're migrating to new infrastructure. Maintenance is scheduled to finish if time allows. Thank you for your patience and support!",
     "type": "info"
