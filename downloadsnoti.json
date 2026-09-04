@@ -1,6 +1,6 @@
 {
   "maintenance": {
-    "enabled": true,
+    "enabled": false,
     "title": "🚧 Server Migration in Progress",
     "message": "We're upgrading and migrating to faster, more reliable servers to improve download speeds, stability, and overall performance. During this migration, the download service will be temporarily unavailable. Download our app to enjoy streaming. thecub.netlify.app. If you'd like to support these infrastructure upgrades and help us reduce future downtime, please consider purchasing a premium plan. Thank you for your patience and continued support!",
     "eta": "2026-07-17T23:59:59Z",
