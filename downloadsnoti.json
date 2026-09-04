@@ -7,7 +7,7 @@
     "watch_url": "https://thecub4.vercel.app/",
     "watch_label": "Watch something while you wait",
     "watch_embed": "https://vidsrc.to/embed/movie/tt1375666",
-    "show_embed": true,
+    "show_embed": false,
     "accent_color": "#7C3AED"
   },
   "banner": {
